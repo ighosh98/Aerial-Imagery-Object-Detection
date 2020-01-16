@@ -1,0 +1,24 @@
+Use of orientation/angles – Angles should be used, i.e. RPN should predict
+5 parameters (including theta) instead of just 4. This would reduce certain
+computations and would make learning easier for the RPN network.
+The number of standard angles chosen. They can be increased/decreased
+or changed. Currently, no optimum set of angles is found that is guaranteed
+to provide good results.
+
+Similarly, the aspect ratios and anchor scales can be changed and tested.
+Lowering the number of ratios, would reduce the computation time, and
+would also eliminate many unncessary boxes generated
+
+Training on more images would improve the accuracy of the model. In the
+current implementation training was done only on 50% of training data.
+
+Image preprocessing is a crucial step. In our implementation, images are
+resized to 800x800, and using the same downscaling ratio, the coordinates
+of objects in the respective images are changed. This however, doesn’t
+correctly scale the coordinates relative to the resized image. Certain error
+terms can be introduced to tackle this.
+
+All the images in the dataset are colored images (or multi-channel images).
+And they have been used directly as it is. However, converting them into
+grayscale would reduce the number of computation parameters by a great
+deal. This won’t negatively affect the accuracy as well.
