@@ -1,10 +1,3 @@
-Instructions to setup the environment : 
-1. Run setyup.py.
-2. Store the VisDrone dataset in the bin folder.
-3. Notice there is a model.h5 file in the repo, this stores the entire model architecture along with it weights. I dont know if the architecture is supposed to be this small but since the size of the file is just 1Kb, I'm guessing it's either not storing the entire model, or is not storing the model at all. Please attempt to load model as instructed below in the readme. 
-It might be possible that since the weights have not yet been stored,that's why it is not taking much space. 
-4. train.py file requires 3 arguments, csv, annotations.csv and class_mapping.csv, all of which are found in VisDrone dataset. Please store this folder in the bin. 
-
 # Keras RetinaNet [![Build Status](https://travis-ci.org/fizyr/keras-retinanet.svg?branch=master)](https://travis-ci.org/fizyr/keras-retinanet) [![DOI](https://zenodo.org/badge/100249425.svg)](https://zenodo.org/badge/latestdoi/100249425)
 
 Keras implementation of RetinaNet object detection as described in [Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002)
