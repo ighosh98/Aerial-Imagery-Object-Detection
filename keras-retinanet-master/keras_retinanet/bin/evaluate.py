@@ -157,9 +157,10 @@ def main(args=None):
         model = models.convert_model(model, anchor_params=anchor_params)
 
     # print model summary
-    # print(model.summary())
+    print(model.summary())
 
     # start evaluation
+    print("Starting Evaluation:")
     if args.dataset_type == 'coco':
         from ..utils.coco_eval import evaluate_coco
         evaluate_coco(generator, model, args.score_threshold)
